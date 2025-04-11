@@ -5,7 +5,8 @@
 package parcial;
 
     public abstract class Criatura {
-    String nombre;
+        
+      protected String nombre;
     protected int salud;
     protected int fuerza;
 
@@ -15,12 +16,12 @@ package parcial;
         this.fuerza = fuerza;
     }
 
+    public abstract void atacar(Criatura objetivo);
+    public abstract void defender(int daño);
+
     public boolean estaViva() {
         return salud > 0;
     }
-
-    public abstract void atacar(Criatura objetivo);
-    public abstract void defender(int dano);
 
     public String getNombre() {
         return nombre;
@@ -29,7 +30,4 @@ package parcial;
     public int getSalud() {
         return salud;
     }
-}
-
-    
 }
